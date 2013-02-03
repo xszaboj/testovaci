@@ -1,24 +1,21 @@
+{block title}
+Nejakou picovinu
+{/block}
+
 {block content}
 
 <h1>{$list->title}</h1>
 
-<table>
-    <thead>
-    <tr>
-        <th>Čas vytvoření</th>
-        <th>Úkol</th>
-        <th>Přiřazeno</th>
-    </tr>
-    </thead>
-    <tbody>
-    {foreach $tasks as $task}
-    <tr>
-        <td>{$task->created|date:'j. n. Y'}</td>
-        <td>{$task->text}</td>
-        <td>{$task->user->name}</td>
-    </tr>
-    {/foreach}
-    </tbody>
-</table>
+<fieldset>
+    <legend>Přidat úkol</legend>
+
+    {form taskForm}
+    <div class="task-form">
+        {label text /} {input text size => 30, autofocus => true} {label userId /} {input userId} {input create}
+    </div>
+    {/form}
+</fieldset>
+
+{control taskList}
 
 {/block}

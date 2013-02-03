@@ -53,4 +53,8 @@ abstract class Repository extends Nette\Object
         return $this->findBy(array('id'=>$id))->fetch();
     }
 
+	public function markDone($id)
+	{
+		$this->findBy(array('id' => $id))->update(array('done' => 1));
+	}
 }

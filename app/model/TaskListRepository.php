@@ -11,4 +11,10 @@ class TaskListRepository extends Repository
 	{
 		return $list->related('task')->order('created');
 	}
+	public function createList($title)
+	{
+		return $this->getTable()->insert(array(
+			'title' => $title
+		));
+	}
 }
