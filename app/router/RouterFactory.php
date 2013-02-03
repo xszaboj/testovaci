@@ -18,6 +18,7 @@ class RouterFactory
 	{
 		$router = new RouteList();
 		$router[] = new Route('index.php', 'Homepage:default', Route::ONE_WAY);
+		$router[] = new Route('debil', 'Manager:default');
 		$router[] = new Route('<presenter>/<action>[/<id>]', 'Homepage:default');
 		return $router;
 	}

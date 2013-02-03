@@ -1,6 +1,6 @@
 {block content}
 
-<h1>Nesplněné úkoly</h1>
+<h1>{$list->title}</h1>
 
 <table>
     <thead>
@@ -15,7 +15,7 @@
     <tr>
         <td>{$task->created|date:'j. n. Y'}</td>
         <td>{$task->text}</td>
-		<td>{$task->user->name}</td>
+        <td>{$task->user->name}</td>
     </tr>
     {/foreach}
     </tbody>

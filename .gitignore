@@ -8,3 +8,4 @@ libs/*
 !web.config
 app/config/config.local.neon
 temp
+/nbproject/private/

@@ -24,9 +24,9 @@ class Authenticator extends Nette\Object implements Security\IAuthenticator
 
 
 
-	public function __construct(Nette\Database\Connection $database)
+	public function __construct(Todo\UserRepository $user)
 	{
-		$this->database = $database;
+		
 	}
 
 
